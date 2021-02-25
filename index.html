@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>送给亲爱的老婆</title>
+		<style type="text/css">
+			body{
+				/* perspective 设置透明点 */
+				perspective: 1000px;
+			}
+			.lifangti{
+				width: 500px;
+				height: 500px;
+				margin: 500px auto;
+				position: relative;
+				/* 设置transform-style：保留子元素3d效果 */
+				transform-style: preserve-3d;
+				transform: rotate3d(0,0,0,0deg);
+				transition: all 5s ease-in-out;
+				
+				
+			}
+			.lifangti:hover{
+				transform: rotate3d(1,1,1,360deg);
+			}
+			.page{
+				width: 500px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				/* 设置透明度 opacity */
+				opacity: 0.8;
+			}
+			.front{
+				background-image: url(img/5X0A7130.jpg);
+				background-size: 100% auto;
+				transform: translateZ(250px);
+			}
+			.back{
+				background-image: url(img/5X0A7123.jpg);
+				background-size: 100% auto;
+				transform: translateZ(-250px);
+			}
+			.left{
+				background-image: url(img/5X0A7131.jpg);
+				background-size: 100% auto;
+				transform:rotateY(-90deg) translateZ(250px);
+			}
+			.right{
+				background-image: url(img/5X0A7135.jpg);
+				background-size: 100% auto;
+				transform: rotateY(90deg) translateZ(250px);
+			}
+			.top{
+				background-image: url(img/5X0A7141.jpg);
+				background-size: 100% auto;
+				transform:  rotateX(90deg) translateZ(250px);
+			}
+			.bottom{
+				background-image: url(img/5X0A7162.jpg);
+				background-size: 100% auto;
+				transform:rotateX(-90deg) translateZ(250px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="lifangti">
+			<div class="page front"></div>
+			<div class="page back"></div>
+			<div class="page left"></div>
+			<div class="page right"></div>
+			<div class="page top"></div>
+			<div class="page bottom"></div>
+		</div>
+	</body>
+</html>
